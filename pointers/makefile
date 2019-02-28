@@ -38,18 +38,6 @@ LineMain:	LineMain.cpp Line.o LineTester.o TesterBase.o Point.o
 PLCMain:   PLCMain.cpp Point.o Line.o PLContainer.o PLContainerTester.o TesterBase.o
 	$(CXX) $(CXXFLAGS) PLCMain.cpp Point.o Line.o  PLContainer.o PLContainerTester.o TesterBase.o -o PLCMain
 
-PointTester.o: PointTester.cpp PointTester.h
-	$(CXX) $(CXXFLAGS) -c PointTester.cpp -o PointTester.o
-
-LineTester.o: LineTester.cpp LineTester.h
-	$(CXX) $(CXXFLAGS) -c LineTester.cpp -o LineTester.o
-
-PLContainerTester.o: PLContainerTester.cpp PLContainerTester.h
-	$(CXX) $(CXXFLAGS) -c PLContainerTester.cpp -o PLContainerTester.o
-
-TesterBase.o: TesterBase.cpp TesterBase.h
-	$(CXX) $(CXXFLAGS) -c TesterBase.cpp -o TesterBase.o
-
 deepclean: 
 	rm -f *~ *.o main PointMain LineMain PLCMain *.exe *.stackdump 
 
