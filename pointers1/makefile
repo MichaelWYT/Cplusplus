@@ -24,12 +24,6 @@ main:	main.cpp Text.o
 Text.o: Text.cpp Text.h
 	$(CXX) $(CXXFLAGS) -c Text.cpp -o Text.o
 
-TextMain:	TextMain.cpp Text.o TextTester.o 
-	$(CXX) $(CXXFLAGS) TextMain.cpp Text.o TextTester.o -o TextMain
-
-TextTester.o: TextTester.cpp TextTester.h
-	$(CXX) $(CXXFLAGS) -c TextTester.cpp -o TextTester.o
-
 deepclean: 
 	rm -f *~ *.o main TextMain *.exe *.stackdump 
 
