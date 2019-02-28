@@ -15,13 +15,7 @@ else
 endif
 
 All: all
-all: main TestPart1
-
-TestPart1: TestPart1.cpp Tester.o Person.o
-	$(CXX) $(CXXFLAGS) TestPart1.cpp Tester.o Person.o -o TestPart1
-
-Tester:	Tester.cpp Tester.h
-	$(CXX) $(CXXFLAGS) -c Tester.cpp -o Tester.o
+all: main
 
 main:	main.cpp Person
 	$(CXX) $(CXXFLAGS) main.cpp Person.o -o main
